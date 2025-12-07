@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BullsEye</title>
+  <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+  <div class="container">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="components/bullseye.png" alt="BullsEye Logo"/>
+    </div>
+
+    <!-- Search bar -->
+    <div class="search-bar">
+      <input id="tickerInput" type="text" placeholder="Enter Stock Name"/>
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <!-- Single-column dashboard -->
+    <div class="dashboard">
+      <div class="card left-card">
+        <img src="components/tesla.png" alt="Brand Logo" class="tesla-logo" id="brandLogo">
+
+        <!-- Yahoo (CLICKABLE) -->
+        <div class="sentiment clickable" id="yfRow" title="Click to show Yahoo articles">
+          <img src="components/yahoo.png" alt="Yahoo" class="icon">
+          <span id="yfText">—</span>
+        </div>
+
+        <!-- Reddit (CLICKABLE) -->
+        <div class="sentiment clickable" id="redditRow" title="Click to show Reddit posts">
+          <img src="components/reddit.png" alt="Reddit" class="icon">
+          <span id="redditText">—</span>
+        </div>
+
+        <!-- General News (CLICKABLE) -->
+        <div class="sentiment clickable" id="newsRow" title="Click to show General News">
+          <img src="components/news.png" alt="News" class="icon">
+          <span id="newsText">—</span>
+        </div>
+
+        <!-- Panels -->
+        <div id="articlesPanel" class="articles hidden"></div> <!-- Yahoo -->
+        <div id="redditPanel" class="articles hidden"></div>   <!-- Reddit -->
+        <div id="newsPanel" class="articles hidden"></div>     <!-- General News -->
+
+        <div id="status" class="status"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- bump cache if needed -->
+  <script src="./style.js?v=5"></script>
+</body>
+</html>
