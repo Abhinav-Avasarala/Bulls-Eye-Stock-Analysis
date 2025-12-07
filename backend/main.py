@@ -11,10 +11,10 @@ from newspaper import Article as NewsArticle
 import yfinance as yf
 from yfinance import Search
 
-from backend.ml_models.ProsusAI_finbert import finbert_classifier, finbert_probs, round_probs
-from backend.ml_models.vader import classify_vader
-from backend.app_reddit import fetch_reddit, router as reddit_router
-from backend.newsAPI import calculate_average_sentiment, router as news_router
+from ml_models.ProsusAI_finbert import finbert_classifier, finbert_probs, round_probs
+from ml_models.vader import classify_vader
+from app_reddit import fetch_reddit, router as reddit_router
+from newsAPI import calculate_average_sentiment, router as news_router
 
 
 class Article(BaseModel):

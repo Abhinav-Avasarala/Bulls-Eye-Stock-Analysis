@@ -9,8 +9,8 @@ from dotenv import load_dotenv
 import requests
 
 # Import your ML models (adjust paths as needed)
-from backend.ml_models.vader import classify_vader
-from backend.ml_models.ProsusAI_finbert import finbert_classifier, finbert_probs, round_probs
+from ml_models.vader import classify_vader
+from ml_models.ProsusAI_finbert import finbert_classifier, finbert_probs, round_probs
 
 load_dotenv()
 

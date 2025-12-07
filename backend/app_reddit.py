@@ -7,9 +7,9 @@ from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel
 from dotenv import load_dotenv
 from fastapi import APIRouter
-from backend.ml_models.vader import classify_vader
-from backend.ml_models.ProsusAI_finbert import finbert_classifier, finbert_probs, round_probs
-from backend.newsAPI import calculate_average_sentiment
+from ml_models.vader import classify_vader
+from ml_models.ProsusAI_finbert import finbert_classifier, finbert_probs, round_probs
+from newsAPI import calculate_average_sentiment
 import praw
 
 load_dotenv()
